@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09A13F814A47198F024A6FCB /* Pods_dilidili_clientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996D6B6CBAAAFB5FA336C26D /* Pods_dilidili_clientUITests.framework */; };
+		2B948BC00FB3D48EDED08BD2 /* Pods_dilidili_clientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104AE13DFCE92C495FD30982 /* Pods_dilidili_clientTests.framework */; };
+		8A428AB43F486820C36799E8 /* Pods_dilidili_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7190C929283DE69E97CC129 /* Pods_dilidili_client.framework */; };
 		9D094740208F34B40086B84C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D09473F208F34B40086B84C /* AppDelegate.swift */; };
 		9D094742208F34B40086B84C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D094741208F34B40086B84C /* ViewController.swift */; };
 		9D094745208F34B40086B84C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D094743208F34B40086B84C /* Main.storyboard */; };
@@ -14,6 +17,12 @@
 		9D09474A208F34B60086B84C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D094748208F34B60086B84C /* LaunchScreen.storyboard */; };
 		9D094755208F34B60086B84C /* dilidili_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D094754208F34B60086B84C /* dilidili_clientTests.swift */; };
 		9D094760208F34B60086B84C /* dilidili_clientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D09475F208F34B60086B84C /* dilidili_clientUITests.swift */; };
+		9D8D1CD92090A37F00340464 /* HomeViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D1CD72090A37F00340464 /* HomeViewCollectionCell.swift */; };
+		9D8D1CDA2090A37F00340464 /* HomeViewCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D1CD82090A37F00340464 /* HomeViewCollectionCell.xib */; };
+		9D8D1CDF2090B84400340464 /* VideoPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D1CDE2090B84400340464 /* VideoPlayViewController.swift */; };
+		9DCB17CB208F9F9100CF7562 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB17CA208F9F9100CF7562 /* HomeViewController.swift */; };
+		9DCB17CD208F9FA000CF7562 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB17CC208F9FA000CF7562 /* MineViewController.swift */; };
+		9DCB17D4208FB15800CF7562 /* MiniTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB17D3208FB15800CF7562 /* MiniTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		104AE13DFCE92C495FD30982 /* Pods_dilidili_clientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dilidili_clientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41214CFB7DA6C577E9A62186 /* Pods-dilidili-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dilidili-client.release.xcconfig"; path = "Pods/Target Support Files/Pods-dilidili-client/Pods-dilidili-client.release.xcconfig"; sourceTree = "<group>"; };
+		58947B21B29F02170EE69891 /* Pods-dilidili-clientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dilidili-clientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dilidili-clientUITests/Pods-dilidili-clientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A25178B47AFAB5FC1821AA8 /* Pods-dilidili-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dilidili-client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dilidili-client/Pods-dilidili-client.debug.xcconfig"; sourceTree = "<group>"; };
+		996D6B6CBAAAFB5FA336C26D /* Pods_dilidili_clientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dilidili_clientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D09473C208F34B40086B84C /* dilidili-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dilidili-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D09473F208F34B40086B84C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D094741208F34B40086B84C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +61,16 @@
 		9D09475B208F34B60086B84C /* dilidili-clientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dilidili-clientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D09475F208F34B60086B84C /* dilidili_clientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dilidili_clientUITests.swift; sourceTree = "<group>"; };
 		9D094761208F34B60086B84C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D8D1CD72090A37F00340464 /* HomeViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCollectionCell.swift; sourceTree = "<group>"; };
+		9D8D1CD82090A37F00340464 /* HomeViewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCollectionCell.xib; sourceTree = "<group>"; };
+		9D8D1CDE2090B84400340464 /* VideoPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayViewController.swift; sourceTree = "<group>"; };
+		9DCB17CA208F9F9100CF7562 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9DCB17CC208F9FA000CF7562 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		9DCB17D3208FB15800CF7562 /* MiniTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniTabBarController.swift; sourceTree = "<group>"; };
+		B3E238DC9474F52B97A508DC /* Pods-dilidili-clientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dilidili-clientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dilidili-clientTests/Pods-dilidili-clientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB39D6397B9557ADB011CB6D /* Pods-dilidili-clientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dilidili-clientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dilidili-clientUITests/Pods-dilidili-clientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F0268BFDFAB6490D7B0084A2 /* Pods-dilidili-clientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dilidili-clientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dilidili-clientTests/Pods-dilidili-clientTests.release.xcconfig"; sourceTree = "<group>"; };
+		F7190C929283DE69E97CC129 /* Pods_dilidili_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dilidili_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A428AB43F486820C36799E8 /* Pods_dilidili_client.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B948BC00FB3D48EDED08BD2 /* Pods_dilidili_clientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A13F814A47198F024A6FCB /* Pods_dilidili_clientUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00432709F524A9F0CAEDA455 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7190C929283DE69E97CC129 /* Pods_dilidili_client.framework */,
+				104AE13DFCE92C495FD30982 /* Pods_dilidili_clientTests.framework */,
+				996D6B6CBAAAFB5FA336C26D /* Pods_dilidili_clientUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		676CC7A093C39B2C0A7DEB9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A25178B47AFAB5FC1821AA8 /* Pods-dilidili-client.debug.xcconfig */,
+				41214CFB7DA6C577E9A62186 /* Pods-dilidili-client.release.xcconfig */,
+				B3E238DC9474F52B97A508DC /* Pods-dilidili-clientTests.debug.xcconfig */,
+				F0268BFDFAB6490D7B0084A2 /* Pods-dilidili-clientTests.release.xcconfig */,
+				58947B21B29F02170EE69891 /* Pods-dilidili-clientUITests.debug.xcconfig */,
+				DB39D6397B9557ADB011CB6D /* Pods-dilidili-clientUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9D094733208F34B40086B84C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +131,8 @@
 				9D094753208F34B60086B84C /* dilidili-clientTests */,
 				9D09475E208F34B60086B84C /* dilidili-clientUITests */,
 				9D09473D208F34B40086B84C /* Products */,
+				676CC7A093C39B2C0A7DEB9C /* Pods */,
+				00432709F524A9F0CAEDA455 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +150,13 @@
 			isa = PBXGroup;
 			children = (
 				9D09473F208F34B40086B84C /* AppDelegate.swift */,
+				9DCB17D3208FB15800CF7562 /* MiniTabBarController.swift */,
 				9D094741208F34B40086B84C /* ViewController.swift */,
+				9DCB17CA208F9F9100CF7562 /* HomeViewController.swift */,
+				9D8D1CDE2090B84400340464 /* VideoPlayViewController.swift */,
+				9D8D1CD72090A37F00340464 /* HomeViewCollectionCell.swift */,
+				9D8D1CD82090A37F00340464 /* HomeViewCollectionCell.xib */,
+				9DCB17CC208F9FA000CF7562 /* MineViewController.swift */,
 				9D094743208F34B40086B84C /* Main.storyboard */,
 				9D094746208F34B60086B84C /* Assets.xcassets */,
 				9D094748208F34B60086B84C /* LaunchScreen.storyboard */,
@@ -132,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D094764208F34B60086B84C /* Build configuration list for PBXNativeTarget "dilidili-client" */;
 			buildPhases = (
+				5AE3B2ABAF3F72B78C2250A0 /* [CP] Check Pods Manifest.lock */,
 				9D094738208F34B40086B84C /* Sources */,
 				9D094739208F34B40086B84C /* Frameworks */,
 				9D09473A208F34B40086B84C /* Resources */,
+				7A32E428B75CCA76CD386563 /* [CP] Embed Pods Frameworks */,
+				9AA86859949AD6FF19504346 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D094767208F34B60086B84C /* Build configuration list for PBXNativeTarget "dilidili-clientTests" */;
 			buildPhases = (
+				4664D8B20CACE7BCCB3E4801 /* [CP] Check Pods Manifest.lock */,
 				9D09474C208F34B60086B84C /* Sources */,
 				9D09474D208F34B60086B84C /* Frameworks */,
 				9D09474E208F34B60086B84C /* Resources */,
+				6BBA7D5E7F64795A54AEE2F1 /* [CP] Embed Pods Frameworks */,
+				B74EA1DBE9FC625F0963D903 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D09476A208F34B60086B84C /* Build configuration list for PBXNativeTarget "dilidili-clientUITests" */;
 			buildPhases = (
+				C283A961C8546D1FD2D45CF2 /* [CP] Check Pods Manifest.lock */,
 				9D094757208F34B60086B84C /* Sources */,
 				9D094758208F34B60086B84C /* Frameworks */,
 				9D094759208F34B60086B84C /* Resources */,
+				7575A3CA4380E5DD08F7D624 /* [CP] Embed Pods Frameworks */,
+				ED9C463B876F60218D174396 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,6 +299,7 @@
 				9D09474A208F34B60086B84C /* LaunchScreen.storyboard in Resources */,
 				9D094747208F34B60086B84C /* Assets.xcassets in Resources */,
 				9D094745208F34B40086B84C /* Main.storyboard in Resources */,
+				9D8D1CDA2090A37F00340464 /* HomeViewCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +319,170 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4664D8B20CACE7BCCB3E4801 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dilidili-clientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AE3B2ABAF3F72B78C2250A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dilidili-client-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BBA7D5E7F64795A54AEE2F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dilidili-clientTests/Pods-dilidili-clientTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7575A3CA4380E5DD08F7D624 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dilidili-clientUITests/Pods-dilidili-clientUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A32E428B75CCA76CD386563 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-dilidili-client/Pods-dilidili-client-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dilidili-client/Pods-dilidili-client-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AA86859949AD6FF19504346 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dilidili-client/Pods-dilidili-client-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B74EA1DBE9FC625F0963D903 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dilidili-clientTests/Pods-dilidili-clientTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C283A961C8546D1FD2D45CF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dilidili-clientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED9C463B876F60218D174396 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dilidili-clientUITests/Pods-dilidili-clientUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D094738208F34B40086B84C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9D094742208F34B40086B84C /* ViewController.swift in Sources */,
+				9D8D1CDF2090B84400340464 /* VideoPlayViewController.swift in Sources */,
+				9D8D1CD92090A37F00340464 /* HomeViewCollectionCell.swift in Sources */,
 				9D094740208F34B40086B84C /* AppDelegate.swift in Sources */,
+				9DCB17D4208FB15800CF7562 /* MiniTabBarController.swift in Sources */,
+				9DCB17CB208F9F9100CF7562 /* HomeViewController.swift in Sources */,
+				9DCB17CD208F9FA000CF7562 /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +653,7 @@
 		};
 		9D094765208F34B60086B84C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A25178B47AFAB5FC1821AA8 /* Pods-dilidili-client.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -445,6 +671,7 @@
 		};
 		9D094766208F34B60086B84C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41214CFB7DA6C577E9A62186 /* Pods-dilidili-client.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,6 +689,7 @@
 		};
 		9D094768208F34B60086B84C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3E238DC9474F52B97A508DC /* Pods-dilidili-clientTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,6 +710,7 @@
 		};
 		9D094769208F34B60086B84C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0268BFDFAB6490D7B0084A2 /* Pods-dilidili-clientTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +731,7 @@
 		};
 		9D09476B208F34B60086B84C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58947B21B29F02170EE69891 /* Pods-dilidili-clientUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -521,6 +751,7 @@
 		};
 		9D09476C208F34B60086B84C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB39D6397B9557ADB011CB6D /* Pods-dilidili-clientUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
