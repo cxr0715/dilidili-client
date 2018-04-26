@@ -6,11 +6,9 @@ target 'dilidili-client' do
   use_frameworks!
 
   # Pods for dilidili-client
-#    pod 'MiniTabBar', '~> 1.1.0'
-#    pod 'RAMAnimatedTabBarController', '3.0.4'
-    pod 'Alamofire', '~> 4.7.2'
-    pod 'SwiftyJSON', '~> 4.1.0'
-
+  pod 'Alamofire', '~> 4.7.2'#网络请求框架
+  pod 'SwiftyJSON', '~> 4.1.0'#json解析框架
+  pod 'BMPlayer', '~> 1.0.0'#视频播放器框架
   target 'dilidili-clientTests' do
     inherit! :search_paths
     # Pods for testing

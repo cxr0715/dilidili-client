@@ -22,8 +22,14 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="emT-Pu-Lvz">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIG-5G-Yb4">
-                        <rect key="frame" x="0.0" y="29" width="50" height="21"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBottomImage" translatesAutoresizingMaskIntoConstraints="NO" id="uKF-Iz-jDg">
+                        <rect key="frame" x="0.0" y="24" width="50" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="gjH-pb-gsK"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIG-5G-Yb4">
+                        <rect key="frame" x="0.0" y="24" width="50" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -31,12 +37,15 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="IIG-5G-Yb4" secondAttribute="bottom" id="SqP-Z5-9FZ"/>
+                <constraint firstAttribute="bottom" secondItem="uKF-Iz-jDg" secondAttribute="bottom" constant="5" id="1WN-fc-f8R"/>
+                <constraint firstAttribute="trailing" secondItem="uKF-Iz-jDg" secondAttribute="trailing" id="E5A-ZR-206"/>
+                <constraint firstAttribute="bottom" secondItem="IIG-5G-Yb4" secondAttribute="bottom" constant="5" id="SqP-Z5-9FZ"/>
                 <constraint firstAttribute="bottom" secondItem="emT-Pu-Lvz" secondAttribute="bottom" id="TMb-mM-kwl"/>
                 <constraint firstAttribute="trailing" secondItem="emT-Pu-Lvz" secondAttribute="trailing" id="WEK-3u-sBK"/>
                 <constraint firstItem="IIG-5G-Yb4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YcZ-7D-UPV"/>
                 <constraint firstItem="emT-Pu-Lvz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Z4x-Nl-Oad"/>
                 <constraint firstAttribute="trailing" secondItem="IIG-5G-Yb4" secondAttribute="trailing" id="hx6-b5-gc5"/>
+                <constraint firstItem="uKF-Iz-jDg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="s3u-LJ-JL3"/>
                 <constraint firstItem="emT-Pu-Lvz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uUN-xy-yKi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -46,4 +55,7 @@
             </connections>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="homeBottomImage" width="51" height="13"/>
+    </resources>
 </document>

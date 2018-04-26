@@ -24,10 +24,17 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
         super.viewDidLoad()
         initCollectionView()
         loadData()
+        self.title = "首页"
     }
     
     func loadData() {
+        #if (TARGET_IPHONE_SIMULATOR)
+        // 模拟器
         let urlRequest = "http://127.0.0.1:8181/home"
+        #else
+        // 真机
+        let urlRequest = "http://172.26.147.180:8181/home"
+        #endif
         Alamofire.request(urlRequest, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
             .responseJSON { (response) in
                 if let value = response.result.value {
@@ -46,15 +53,16 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
     func initCollectionView() {
         let defaultLayout = UICollectionViewFlowLayout()
         defaultLayout.scrollDirection = UICollectionViewScrollDirection.vertical//设置垂直显示
-        defaultLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)//设置边距
-        defaultLayout.itemSize = CGSize(width: kScreenWidth/2, height: kScreenWidth/2)
-        defaultLayout.minimumLineSpacing = 0.0 //每个相邻的layout的上下间隔
-        defaultLayout.minimumInteritemSpacing = 0.0 //每个相邻layout的左右间隔
+        defaultLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)//设置边距
+        defaultLayout.itemSize = CGSize(width: kScreenWidth/2 - 20, height: kScreenWidth/2 - 20)
+        defaultLayout.minimumLineSpacing = 10.0 //每个相邻的layout的上下间隔
+        defaultLayout.minimumInteritemSpacing = 10.0 //每个相邻layout的左右间隔
         defaultLayout.headerReferenceSize = CGSize(width: 0, height: 0)
-        defaultLayout.footerReferenceSize = CGSize(width: 0, height: 15)
+        defaultLayout.footerReferenceSize = CGSize(width: 0, height: 0)
         
         collectionView = UICollectionView(frame: CGRect(x:0, y:0, width:kScreenWidth, height:kScreenHeight), collectionViewLayout: defaultLayout)
-        collectionView?.backgroundColor = UIColor.lightGray
+        collectionView?.alwaysBounceVertical = true
+        collectionView?.backgroundColor = UIColor.white
         collectionView?.register(UINib(nibName: "HomeViewCollectionCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         
         collectionView?.dataSource = self
@@ -80,11 +88,11 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("点击了第\(indexPath.section) 分区 ,第\(indexPath.row) 个元素")
         let dic:Dictionary<String,String> = dataSourceArray[indexPath.row] as! Dictionary<String, String>
         let videoID = dic["id"]
         
         let videoPlayVC = VideoPlayViewController()
+        videoPlayVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(videoPlayVC, animated: true)
         videoPlayVC.loadData(animateID: videoID!)
     }

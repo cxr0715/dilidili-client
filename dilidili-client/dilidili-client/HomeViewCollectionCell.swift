@@ -14,6 +14,8 @@ class HomeViewCollectionCell: UICollectionViewCell {
     @IBOutlet weak var videoLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
         // Initialization code
     }
     
