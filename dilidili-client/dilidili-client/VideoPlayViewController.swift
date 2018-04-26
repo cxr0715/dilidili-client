@@ -23,7 +23,17 @@ class VideoPlayViewController: UIViewController,UITableViewDelegate,UITableViewD
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.initView()
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func applicationDidEnterBackground() {
+        self.player!.pause(allowAutoPlay: false)
+    }
+    
+    @objc func applicationDidBecomeActive() {
+        self.player!.play()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,9 +51,21 @@ class VideoPlayViewController: UIViewController,UITableViewDelegate,UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
+    deinit {
+        self.player!.prepareToDealloc()
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     private func initView() {
         self.player = BMPlayer()
         self.player!.delegate = self
+        self.player!.backBlock = { [unowned self] (isFullScreen) in
+            if isFullScreen {
+                return
+            } else {
+                let _ = self.navigationController?.popViewController(animated: true)
+            }
+        }
         tableView = UITableView()
         tableView!.delegate = self
         tableView!.dataSource = self
@@ -66,15 +88,14 @@ class VideoPlayViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     
     func loadData(animateID:String) {
-        #if (TARGET_IPHONE_SIMULATOR)
-        // 模拟器
-        let urlRequest = "http://127.0.0.1:8181/videolist"
+        #if arch(i386) || arch(x86_64)
+            let urlRequest = "http://127.0.0.1:8181/videolist"
         #else
-        // 真机
-        let urlRequest = "http://172.26.147.180:8181/videolist"
+//            let urlRequest = "http://172.26.147.180:8181/videolist"
+        let urlRequest = "http://192.168.3.29:8181/videolist"
         #endif
-        let parameters:Dictionary = ["animateID":animateID]
         
+        let parameters:Dictionary = ["animateID":animateID]
         Alamofire.request(urlRequest, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
             .responseJSON { (response) in
                 if let value = response.result.value {
@@ -94,7 +115,8 @@ class VideoPlayViewController: UIViewController,UITableViewDelegate,UITableViewD
                 }
         }
     }
-
+    
+    // MARK:- UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.videoArray.count
     }
@@ -109,6 +131,7 @@ class VideoPlayViewController: UIViewController,UITableViewDelegate,UITableViewD
         return cell
     }
     
+    // MARK:- UITableViewDelegate,
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dic1:Dictionary<String,String> = self.videoArray[indexPath.row] as! Dictionary<String,String>
         let nameString:String = dic1["animateIndex"]! + "：" + dic1["animateName"]!
@@ -117,8 +140,7 @@ class VideoPlayViewController: UIViewController,UITableViewDelegate,UITableViewD
         self.player!.setVideo(resource: asset)
     }
     
-    // MARK:- BMPlayerDelegate example
-    
+    // MARK:- BMPlayerDelegate
     func bmPlayer(player: BMPlayer, playerStateDidChange state: BMPlayerState) {
         
     }

@@ -11,6 +11,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+
 let kScreenWidth:CGFloat    = UIScreen.main.bounds.width
 let kScreenHeight:CGFloat   = UIScreen.main.bounds.height
 let cellIdentifier:String = "HomeViewCollectionCell"
@@ -28,13 +29,13 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
     }
     
     func loadData() {
-        #if (TARGET_IPHONE_SIMULATOR)
-        // 模拟器
+        
+    #if arch(i386) || arch(x86_64)
         let urlRequest = "http://127.0.0.1:8181/home"
-        #else
-        // 真机
-        let urlRequest = "http://172.26.147.180:8181/home"
-        #endif
+    #else
+//        let urlRequest = "http://172.26.147.180:8181/home"
+        let urlRequest = "http://192.168.3.29:8181/home"
+    #endif
         Alamofire.request(urlRequest, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
             .responseJSON { (response) in
                 if let value = response.result.value {
@@ -47,7 +48,7 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
                         }
                     }
                 }
-            }
+        }
     }
     
     func initCollectionView() {
@@ -95,5 +96,15 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
         videoPlayVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(videoPlayVC, animated: true)
         videoPlayVC.loadData(animateID: videoID!)
+    }
+    
+    struct Platform {
+        static let isSimulator: Bool = {
+            var isSim = false
+            #if arch(i386) || arch(x86_64)
+            isSim = true
+            #endif
+            return isSim
+        }()
     }
 }
