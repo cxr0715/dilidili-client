@@ -35,6 +35,7 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
     #else
 //        let urlRequest = "http://172.26.147.180:8181/home"
         let urlRequest = "http://192.168.3.29:8181/home"
+//        let urlRequest = "http://172.26.83.6/home"
     #endif
         Alamofire.request(urlRequest, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
             .responseJSON { (response) in
@@ -49,6 +50,19 @@ class HomeViewController: UIViewController,UICollectionViewDelegate,UICollection
                     }
                 }
         }
+//        Alamofire.request(urlRequest, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+//            .responseJSON { (response) in
+//                if let value = response.result.value {
+//                    let json = JSON(value)
+//                    if let dic = json.dictionary {
+//                        let result = dic["result"]?.string
+//                        if result == "SUCCESS" {
+//                            self.dataSourceArray = json["list"].arrayObject! as Array
+//                            self.collectionView?.reloadData()
+//                        }
+//                    }
+//                }
+//        }
     }
     
     func initCollectionView() {

@@ -17,7 +17,7 @@ class MiniTabBarController: UITabBarController {
 
     private func createCustomTabBar() {
         let homeVC = HomeViewController()
-        let homeItem = UITabBarItem.init(title: "首页", image: UIImage.init(named: "tab1"), selectedImage: nil)
+        let homeItem = UITabBarItem.init(title: "首页", image: #imageLiteral(resourceName: "tab1"), selectedImage: nil)
         let homeNav = UINavigationController(rootViewController: homeVC)
         homeNav.tabBarItem = homeItem
         

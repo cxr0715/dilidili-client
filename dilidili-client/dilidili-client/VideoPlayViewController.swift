@@ -92,7 +92,8 @@ class VideoPlayViewController: UIViewController,UITableViewDelegate,UITableViewD
             let urlRequest = "http://127.0.0.1:8181/videolist"
         #else
 //            let urlRequest = "http://172.26.147.180:8181/videolist"
-        let urlRequest = "http://192.168.3.29:8181/videolist"
+            let urlRequest = "http://192.168.3.29:8181/videolist"
+//            let urlRequest = "http://172.26.83.6/videolist"
         #endif
         
         let parameters:Dictionary = ["animateID":animateID]

@@ -50,6 +50,7 @@
 		58947B21B29F02170EE69891 /* Pods-dilidili-clientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dilidili-clientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dilidili-clientUITests/Pods-dilidili-clientUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A25178B47AFAB5FC1821AA8 /* Pods-dilidili-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dilidili-client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dilidili-client/Pods-dilidili-client.debug.xcconfig"; sourceTree = "<group>"; };
 		996D6B6CBAAAFB5FA336C26D /* Pods_dilidili_clientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dilidili_clientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D0604B020A32A4200BF3F4A /* dilidili-client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "dilidili-client.entitlements"; sourceTree = "<group>"; };
 		9D09473C208F34B40086B84C /* dilidili-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dilidili-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D09473F208F34B40086B84C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D094741208F34B40086B84C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 		9D09473E208F34B40086B84C /* dilidili-client */ = {
 			isa = PBXGroup;
 			children = (
+				9D0604B020A32A4200BF3F4A /* dilidili-client.entitlements */,
 				9D09473F208F34B40086B84C /* AppDelegate.swift */,
 				9DCB17D3208FB15800CF7562 /* MiniTabBarController.swift */,
 				9D094741208F34B40086B84C /* ViewController.swift */,
@@ -162,9 +164,9 @@
 				9D8D1CDE2090B84400340464 /* VideoPlayViewController.swift */,
 				9D8D1CE0209106A700340464 /* VideoPlayTableViewCell.swift */,
 				9D8D1CE1209106A700340464 /* VideoPlayTableViewCell.xib */,
+				9D094746208F34B60086B84C /* Assets.xcassets */,
 				9DCB17CC208F9FA000CF7562 /* MineViewController.swift */,
 				9D094743208F34B40086B84C /* Main.storyboard */,
-				9D094746208F34B60086B84C /* Assets.xcassets */,
 				9D094748208F34B60086B84C /* LaunchScreen.storyboard */,
 				9D09474B208F34B60086B84C /* Info.plist */,
 			);
@@ -266,6 +268,14 @@
 				TargetAttributes = {
 					9D09473B208F34B40086B84C = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					9D09474F208F34B60086B84C = {
 						CreatedOnToolsVersion = 9.3;
@@ -672,6 +682,7 @@
 			baseConfigurationReference = 8A25178B47AFAB5FC1821AA8 /* Pods-dilidili-client.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "dilidili-client/dilidili-client.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -681,10 +692,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "caoxuerui.dilidili-client";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxuerui.dilidili.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3b9a5e65-3873-4bb3-87d8-20f37bd36982";
-				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
+				PROVISIONING_PROFILE = "193bca42-2412-4b39-9563-5daf13c28aad";
+				PROVISIONING_PROFILE_SPECIFIER = "caoxuerui Test";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -696,6 +707,7 @@
 			baseConfigurationReference = 41214CFB7DA6C577E9A62186 /* Pods-dilidili-client.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "dilidili-client/dilidili-client.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -705,7 +717,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "caoxuerui.dilidili-client";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxuerui.dilidili.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
