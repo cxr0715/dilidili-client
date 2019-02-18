@@ -44,13 +44,13 @@
 >swift package generate-xcodeproj
 >```
 
-####For example : 访问静态文件
+#### For example : 访问静态文件
 
 把对应的静态文件放在Products目录下，浏览器输入地址：http://localhost:8181/文件名（http://localhost:8181/baymax.html）即可访问
 
 ***
 
-###2. 启动服务
+### 2. 启动服务
 
 ```swift
 // 启动配置
@@ -90,7 +90,7 @@ do {
 
 ***
 
-###3. 添加路由
+### 3. 添加路由
 
 ```swift
 ["method":"get", "uri":"/home", "handler":handlerHome]
@@ -98,7 +98,7 @@ do {
 
 ***
 
-###4. 处理具体请求的handler
+### 4. 处理具体请求的handler
 
 ```Swift
 func handlerHome(request: HTTPRequest, response: HTTPResponse) {
@@ -111,7 +111,7 @@ func handlerHome(request: HTTPRequest, response: HTTPResponse) {
 
 ***
 
-###5. 使用Swift Package Manager (SPM) 做依赖管理
+### 5. 使用Swift Package Manager (SPM) 做依赖管理
 
 clone下来的代码我们可以在Package.swift中添加自己需要的dependencies：
 
@@ -134,14 +134,14 @@ let package = Package(
 
 使用Perfect实现后台，swift实现客户端，设计了一个简单的dilidili程序。其中后台主要实现了爬虫爬取dilidili视频数据，操作MySQL的增删改查，客户端首页的请求，视频列表请求。客户端主要实现了使用swift实现数据请求，json解析，视频播放。
 
-###1. 爬虫 
+### 1. 爬虫 
 
-####1. 添加爬虫的路由：
+#### 1. 添加爬虫的路由：
 ```swift
 // 添加路由
 ["method":"get", "uri":"/crawler", "handler":handlerCrawler],
 ```
-####2. 爬虫请求处理的handler： 
+#### 2. 爬虫请求处理的handler： 
 
 ```swift
 // handler
@@ -157,7 +157,7 @@ func handlerCrawler(request: HTTPRequest, response: HTTPResponse) {
 
 }
 ```
-####3. 结果解析，拿到每一集的视频地址，标题，index
+#### 3. 结果解析，拿到每一集的视频地址，标题，index
 
 ```swift
 // 解析HTML，返回vidoeURLArray, titleArray, indexArray
@@ -205,9 +205,9 @@ static func extendHTML(html:String) -> (vidoeURLArray:Array<String>, titleArray:
     }
 ```
 
-###2. MySQL操作 
+### 2. MySQL操作 
 
-####1. 实现一个MySQLManager，用于连接MySQL 
+#### 1. 实现一个MySQLManager，用于连接MySQL 
 ```swift
 class MySQLManager {
     var mysql : MySQL!
@@ -237,7 +237,7 @@ class MySQLManager {
 }
 ```
 
-####2. 存放爬取到的数据到MySQL中
+#### 2. 存放爬取到的数据到MySQL中
 
 ```swift
 	/// 插入数据到home表
@@ -277,7 +277,7 @@ class MySQLManager {
     }
 ```
 
-####3. 取MySQL中的数据
+#### 3. 取MySQL中的数据
 
 ```swift
  	/// 查询home表
@@ -313,18 +313,18 @@ class MySQLManager {
     }
 ```
 
-###3. 实现客户端API
+### 3. 实现客户端API
 
 主要有两个API接口，查询首页信息和查询每集信息
 
-####1. 添加首页和每集的路由
+#### 1. 添加首页和每集的路由
 
 ```swift
 ["method":"get", "uri":"/home", "handler":handlerHome],
 ["method":"post", "uri":"/videolist", "handler":handlerVideolist],
 ```
 
-####2. handler
+#### 2. handler
 
 ```swift
 // 首页信息
@@ -348,7 +348,7 @@ func handlerVideolist(request: HTTPRequest, response: HTTPResponse) {
 }
 ```
 
-####3. 查询首页数据和每集信息数据，并且返回json 
+#### 3. 查询首页数据和每集信息数据，并且返回json 
 
 ```swift
 	/// 查询home表
@@ -419,13 +419,13 @@ func handlerVideolist(request: HTTPRequest, response: HTTPResponse) {
     }
 ```
 
-###4. APNS
+### 4. APNS
 
 Apple Push Notification service。苹果推送通知服务
 
 ![APNS](/Users/yyinc/Downloads/apns.jpg)
 
-####1. app向APNS 注册，系统询问是否允许通知，选择是以后系统向APNS发送请求 
+#### 1. app向APNS 注册，系统询问是否允许通知，选择是以后系统向APNS发送请求 
 
 ```swift
 let center = UNUserNotificationCenter.current()
@@ -436,7 +436,7 @@ center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error 
 }
 ```
 
-####2. APNS返回一个device token，通过didRegisterForRemoteNotificationsWithDeviceToken获取device token（跟随设备，同一设备使用同一个device token） 
+#### 2. APNS返回一个device token，通过didRegisterForRemoteNotificationsWithDeviceToken获取device token（跟随设备，同一设备使用同一个device token） 
 
 ```Swift 
 func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
@@ -446,7 +446,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 }
 ```
 
-####3. app 把获取到的device token传给自己的服务器
+#### 3. app 把获取到的device token传给自己的服务器
 
 ```swift
 let hex = deviceTokenUse.hexString
@@ -464,7 +464,7 @@ let hex = deviceTokenUse.hexString
         }
 ```
 
-####4. 当需要发送消息给app时候，自己的服务器根据收到的device token为依据发送消息给APNS
+#### 4. 当需要发送消息给app时候，自己的服务器根据收到的device token为依据发送消息给APNS
 
 ```swift
 NotificationPusher(apnsTopic: notificationsTestId)
@@ -473,9 +473,9 @@ NotificationPusher(apnsTopic: notificationsTestId)
 }
 ```
 
-####5. APNS发送一条消息给指定的app
+#### 5. APNS发送一条消息给指定的app
 
-###5. 客户端实现
+### 5. 客户端实现
 
 首页使用UICollectionView承载展示数据，使用Alamofire框架去请求数据（AFNetworking的swift版），使用代码+xib进行布局
 
@@ -513,11 +513,11 @@ player.snp.remakeConstraints { (make) in
 
 ## 3. 其他
 
-###1. swift
+### 1. swift
 
 Image Literal
 
-###2. git
+### 2. git
 
 可以尝试使用[git svn](https://git-scm.com/book/zh/v2/Git-%E4%B8%8E%E5%85%B6%E4%BB%96%E7%B3%BB%E7%BB%9F-%E4%BD%9C%E4%B8%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84-Git)
 
