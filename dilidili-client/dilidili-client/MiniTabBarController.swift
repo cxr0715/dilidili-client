@@ -16,6 +16,7 @@ class MiniTabBarController: UITabBarController {
     }
 
     private func createCustomTabBar() {
+        UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 0, height: 0))
         let homeVC = HomeViewController()
         let homeItem = UITabBarItem.init(title: "首页", image: #imageLiteral(resourceName: "tab1"), selectedImage: nil)
         let homeNav = UINavigationController(rootViewController: homeVC)
